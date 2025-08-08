@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Law Firm Raffle - Spin the Wheel</title>
+  <link rel="stylesheet" href="Styling.css"/>
+</head>
+<body>
+  <h1>Law Firm Raffle</h1>
+
+  <div class="wheel-container">
+    <!-- size is auto-managed by JS for perfect scaling -->
+    <canvas id="wheel"></canvas>
+    <div class="arrow"></div>
+    <!-- Company Logo in Center -->
+<svg id="centerLogo" viewBox="0 0 57 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left half -->
+  <polygon class="st1" points="0.5,0 0.5,16 7.6,16 8.5,16 8.5,16.2 8.5,31.9 8.5,32 7.6,32 0.5,32 0.5,48 25.5,48 25.5,0"></polygon>
+  <!-- Right half -->
+  <polygon class="st1" points="31.5,0 31.5,48 56.5,48 56.5,32 49.4,32 49.5,32 49.5,31.9 49.5,16.2 49.5,16 49.4,16 56.5,16 56.5,0"></polygon>
+</svg>
+
+  </div>
+
+  <button id="spinBtn">SPIN</button>
+  <div id="hint">Press Enter to spin</div>
+
+  <p id="result"></p>
+
+  <!-- Winner Modal -->
+  <div id="winnerModal" class="modal">
+    <div class="modal-content">
+      <h2 id="winnerName"></h2>
+      <button id="modalOkBtn">OK</button>
+    </div>
+  </div>
+
+  <!-- Final Results Modal -->
+  <div id="resultsModal" class="modal">
+    <div class="modal-content">
+      <h2>Final Draw Order</h2>
+      <ol id="resultsList"></ol>
+      <button id="resultsOkBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
